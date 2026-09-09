@@ -1,0 +1,1 @@
+../../../../../../core/profiles/product.md

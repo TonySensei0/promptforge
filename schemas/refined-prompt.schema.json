@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PromptForge Refined Prompt",
+  "description": "Schema for the structured output of a PromptForge refinement.",
+  "type": "object",
+  "required": [
+    "original_request",
+    "objective",
+    "confirmed_requirements",
+    "assumptions",
+    "open_questions",
+    "scope",
+    "non_goals",
+    "repository_context",
+    "functional_requirements",
+    "technical_constraints",
+    "security_requirements",
+    "testing_requirements",
+    "acceptance_criteria",
+    "implementation_phases",
+    "verification_commands"
+  ],
+  "properties": {
+    "original_request": {
+      "type": "string",
+      "description": "The developer's verbatim request."
+    },
+    "objective": {
+      "type": "string",
+      "description": "One sentence: what this work produces."
+    },
+    "confirmed_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Requirements explicitly stated in the request."
+    },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Reasonable inferences, explicitly labeled as assumptions."
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Questions that need developer input before implementation."
+    },
+    "scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What is included in this work."
+    },
+    "non_goals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What is explicitly out of scope."
+    },
+    "repository_context": {
+      "type": "object",
+      "description": "Detected project information. Use {\"status\": \"N/A — new project\"} for new projects.",
+      "properties": {
+        "status": { "type": "string" },
+        "framework": { "type": "string" },
+        "runtime": { "type": "string" },
+        "package_manager": { "type": "string" },
+        "database": { "type": "string" },
+        "authentication": { "type": "string" },
+        "test_framework": { "type": "string" },
+        "ui_components": { "type": "string" },
+        "deployment": { "type": "string" },
+        "patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "functional_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific actions or behaviors the system must support."
+    },
+    "technical_constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Framework, runtime, performance, compatibility, and dependency constraints."
+    },
+    "data_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Data entities, fields, relationships, validation rules, and migration strategy."
+    },
+    "api_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "API endpoints, schemas, authentication, error format, rate limiting, versioning."
+    },
+    "ui_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Component hierarchy, responsive behavior, accessibility, loading/error/empty states."
+    },
+    "error_states": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Each error scenario and how it is handled (user-facing, logged, recovery)."
+    },
+    "empty_states": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What the user sees when data is absent."
+    },
+    "security_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Authentication, authorization, input validation, secrets, privacy, rate limiting, security testing."
+    },
+    "testing_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Test types, scenarios, test data, coverage expectations."
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific, verifiable, independent criteria. Given/When/Then or checklist format."
+    },
+    "implementation_phases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ordered phases, each with goal, deliverables, and done condition.",
+      "minItems": 1
+    },
+    "verification_commands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Exact commands to verify each phase (install, migrate, test, lint, run)."
+    },
+    "quality_review": {
+      "type": "object",
+      "description": "Self-assessment scores on each quality dimension.",
+      "required": ["clarity", "completeness", "testability", "technical_feasibility", "scope_control"],
+      "properties": {
+        "clarity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "completeness": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "testability": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "technical_feasibility": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "scope_control": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "notes": {
+          "type": "string",
+          "description": "Explanations for any score below 4, and improvement recommendations."
+        }
+      }
+    }
+  }
+}

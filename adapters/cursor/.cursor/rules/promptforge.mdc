@@ -1,0 +1,30 @@
+# PromptForge Methodology Rule
+
+This project uses PromptForge for requirements refinement before implementation.
+
+## When to Refine
+
+Before implementing any feature or fix, use the appropriate refinement command:
+
+- `/refine-build` — General software development (default)
+- `/refine-architect` — System design or structural changes
+- `/refine-security` — Security-sensitive features
+- `/refine-performance` — Performance optimization or critical paths
+- `/refine-frontend` — User interface or client-side work
+- `/refine-debug` — Bug investigation and diagnosis
+
+## Refinement Rules
+
+1. Always run refinement before implementation for non-trivial changes
+2. The refined prompt must contain: objective, assumptions, scope, non-goals, acceptance criteria, testing requirements, implementation phases, and verification commands
+3. All assumptions must be explicitly labeled
+4. All open questions must be surfaced before implementation
+5. Wait for `approve` before implementing
+6. If the developer provides feedback instead of `approve`, revise the refinement
+
+## Quality Standards
+
+- Acceptance criteria must be specific and testable
+- Scope and non-goals must be explicitly defined
+- Repository context must be inspected for existing projects
+- No invented architecture or unnecessary dependencies

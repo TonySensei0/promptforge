@@ -1,0 +1,1 @@
+../../../../../../core/profiles/architect.md
