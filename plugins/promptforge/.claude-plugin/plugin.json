@@ -1,0 +1,9 @@
+{
+  "name": "promptforge",
+  "description": "Turns vague software requests into structured, repository-aware implementation briefs for AI coding agents.",
+  "version": "1.0.0",
+  "author": {
+    "name": "PromptForge Contributors"
+  },
+  "license": "MIT"
+}

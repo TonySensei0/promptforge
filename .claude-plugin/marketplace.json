@@ -1,0 +1,13 @@
+{
+  "name": "promptforge-marketplace",
+  "owner": {
+    "name": "PromptForge Contributors"
+  },
+  "plugins": [
+    {
+      "name": "promptforge",
+      "source": "./plugins/promptforge",
+      "description": "A local-first requirements compiler for AI coding agents."
+    }
+  ]
+}

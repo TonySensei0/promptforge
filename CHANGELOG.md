@@ -8,10 +8,24 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 
 ### Added
-- Claude Code adapter with 8 skills (refine-build, refine-architect, refine-security, refine-performance, refine-frontend, refine-backend, refine-product, refine-debug)
-- Cursor adapter with 6 commands and project rule
-- Backend and Product methodology profiles
-- Profile-specific additions to Claude Code adapter
+- 7 new skills: refine-audit, refine-testing, refine-api, refine-db, refine-mysql, refine-postgresql, refine-mongodb
+- Claude Code plugin system (plugins/promptforge/ with bundled core methodology)
+- Claude Code marketplace (.claude-plugin/marketplace.json)
+- Antigravity distribution adapter (7 new skills)
+- Cursor distribution adapter (7 new command files)
+- Distribution layer: installers/, .claude-plugin/, plugins/
+- Universal installer (installers/install.sh)
+- Platform-specific installers (claude-code, antigravity, cursor)
+- Uninstaller (installers/uninstall.sh)
+- Installation verification script (scripts/verify-installation.sh)
+- DISTRIBUTION.md — distribution architecture documentation
+- RELEASE.md — release process documentation
+- VERSION file — single source of truth for versioning
+- 7 new core profiles (audit, testing, api, db, mysql, postgresql, mongodb)
+- Monetization section in README
+- Professional README with badges, emojis, table of contents, visuals
+- Total: 15 commands across Claude Code, Antigravity, and Cursor adapters
+- Total: 14 methodology profiles (7 original + 7 new)
 
 ## [0.3.0] - 2026-09-09
 
