@@ -175,6 +175,8 @@ Commands like `/refine-build` will be available in Cursor's command palette.
 | `/refine-product` 📊 | Feature planning and MVP scoping |
 | `/refine-backend` 🗄️ | Server-side logic, APIs, data persistence |
 | `/refine-audit` 🔍 | Code review, security audit, dependency audit, compliance |
+| `/ai-security-audit` 🛡️ | Scan codebase for all vulnerabilities (secrets, auth, injection, XSS, etc.) |
+| `/ai-security-fix` 🔧 | Fix vulnerabilities from a security audit report |
 | `/refine-testing` 🧪 | Test strategy, coverage planning, QA |
 | `/refine-api` 🌐 | API design, REST/GraphQL/gRPC contracts, versioning |
 | `/refine-db` 🗃️ | Database-agnostic schema design, migrations, indexing |
@@ -301,61 +303,6 @@ The AI reasoning is performed by your existing coding agent. PromptForge provide
 - **Not deterministic** — Since refinement uses an LLM, different runs may produce different outputs.
 - **Requires a coding agent** — Built for Antigravity, Claude Code, and Cursor. Not a standalone application.
 - **No persistence** — Refinements are not stored or versioned (yet).
-
----
-
-## 💰 Monetization
-
-PromptForge is open-source (MIT License) and free to use. Here are ways to build a business around it:
-
-### 1. Paid Premium Profiles 📦
-
-Create specialized profiles sold as premium packs:
-
-| Profile | Price | Target |
-|---------|-------|--------|
-| **Enterprise** | $49 | SOC 2, HIPAA, PCI DSS compliance workflows |
-| **Startup** | $29 | MVP scoping, investor-ready specs, pitch deck generation |
-| **Agency** | $39 | Client requirement templates, project estimation, SOW generation |
-| **Freelancer** | $19 | Client brief templates, contract-ready specs, time estimation |
-
-### 2. Managed Plugin Marketplace 🏪
-
-Host a curated marketplace of community profiles:
-
-- 20-30% commission on paid profile sales
-- Hosting, versioning, and discovery
-- Similar to VS Code Extension Marketplace or JetBrains Marketplace
-
-### 3. Teams and Organizations 👥
-
-| Tier | Price | Features |
-|------|-------|----------|
-| **Starter** | $10/user/mo | Shared refinement library |
-| **Business** | $25/user/mo | Custom methodology, approval workflows |
-| **Enterprise** | Custom | Audit logs, SSO, dedicated support |
-
-### 4. Consulting and Training 🎓
-
-- Enterprise onboarding and custom methodology design
-- Team training workshops
-- Custom profile development for specific domains
-- Pricing: $150-300/hour or $5,000-15,000/project
-
-### 5. AI-Powered Enhancement 🤖
-
-Optional AI-powered features (separate from the core methodology):
-
-- Automatic requirement gap detection using code analysis
-- Cross-project pattern learning
-- Smart template generation from past refinements
-- Pricing: Freemium with $9-49/month paid tiers
-
-### 6. Certification 🎓
-
-- PromptForge Methodology Certification for developers
-- Enterprise training programs
-- Pricing: $99-299/certification
 
 ---
 

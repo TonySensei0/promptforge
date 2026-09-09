@@ -5,5 +5,92 @@
   "author": {
     "name": "PromptForge Contributors"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "refine-build",
+      "description": "General software development — requirements compilation for any feature or system",
+      "category": "refine"
+    },
+    {
+      "name": "refine-architect",
+      "description": "System design and architecture decisions",
+      "category": "refine"
+    },
+    {
+      "name": "refine-security",
+      "description": "Security-sensitive features and threat modeling",
+      "category": "refine"
+    },
+    {
+      "name": "refine-performance",
+      "description": "Performance optimization and profiling",
+      "category": "refine"
+    },
+    {
+      "name": "refine-frontend",
+      "description": "User interface and client-side work",
+      "category": "refine"
+    },
+    {
+      "name": "refine-backend",
+      "description": "Server-side logic, APIs, data persistence",
+      "category": "refine"
+    },
+    {
+      "name": "refine-product",
+      "description": "Feature planning and MVP scoping",
+      "category": "refine"
+    },
+    {
+      "name": "refine-debug",
+      "description": "Bug investigation and diagnosis",
+      "category": "refine"
+    },
+    {
+      "name": "refine-audit",
+      "description": "Code review, security audit, dependency audit, compliance checks",
+      "category": "refine"
+    },
+    {
+      "name": "ai-security-audit",
+      "description": "Comprehensive security audit — scans for secrets, injection, XSS, misconfigurations, and AI-generated code red flags",
+      "category": "security"
+    },
+    {
+      "name": "ai-security-fix",
+      "description": "Fix vulnerabilities from a security audit report — structured fix instructions grouped by severity",
+      "category": "security"
+    },
+    {
+      "name": "refine-testing",
+      "description": "Test strategy, coverage planning, QA",
+      "category": "refine"
+    },
+    {
+      "name": "refine-api",
+      "description": "API design, REST/GraphQL/gRPC contracts, versioning",
+      "category": "refine"
+    },
+    {
+      "name": "refine-db",
+      "description": "Database-agnostic schema design, migrations, indexing",
+      "category": "refine"
+    },
+    {
+      "name": "refine-mysql",
+      "description": "MySQL/MariaDB: InnoDB, indexing, replication, HA",
+      "category": "refine"
+    },
+    {
+      "name": "refine-postgresql",
+      "description": "PostgreSQL: JSONB, CTEs, RLS, extensions, partitioning",
+      "category": "refine"
+    },
+    {
+      "name": "refine-mongodb",
+      "description": "MongoDB: documents, aggregation, indexing, sharding",
+      "category": "refine"
+    }
+  ]
 }
