@@ -37,7 +37,6 @@ into structured, implementation-ready engineering prompts with explicit assumpti
 - [Design Principles](#-design-principles)
 - [Privacy](#-privacy)
 - [Limitations](#-limitations)
-- [Monetization](#-monetization)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
 - [License](#-license)
@@ -135,30 +134,67 @@ Agent: [implements with full context]
 
 ## 📦 Installation
 
-### 🤖 Antigravity
+## 📦 Installation
 
+PromptForge is just a collection of skill files. You do **not** need to clone this repo or install a separate package. Pick the instructions for your IDE below and copy the files into your project.
+
+---
+
+### Option A: Install for a single project
+
+Install PromptForge inside the project you're currently working on. The skills will only be available in that project.
+
+**Antigravity** (per-project):
 ```bash
-cp -r adapters/antigravity/.agents/skills/ .agents/skills/
+# From your project root:
+cp -r /path/to/promptforge/adapters/antigravity/.agents/skills/ .agents/skills/
 ```
 
-Or install globally in your Antigravity configuration.
-
-### 🧠 Claude Code
-
+**Claude Code** (per-project):
 ```bash
-cp -r adapters/claude-code/.claude/skills/ .claude/skills/
+# From your project root:
+cp -r /path/to/promptforge/adapters/claude-code/.claude/skills/ .claude/skills/
+```
+Then restart Claude Code.
+
+**Cursor** (per-project):
+```bash
+# From your project root:
+cp -r /path/to/promptforge/adapters/cursor/.cursor/commands/ .cursor/commands/
+cp -r /path/to/promptforge/adapters/cursor/.cursor/rules/ .cursor/rules/
 ```
 
-Restart Claude Code. Commands like `/refine-build` will be available.
+---
 
-### ⌨️ Cursor
+### Option B: Install globally (all projects)
 
-```bash
-cp -r adapters/cursor/.cursor/commands/ .cursor/commands/
-cp -r adapters/cursor/.cursor/rules/ .cursor/rules/
+Install PromptForge once so it's available in every project you work on.
+
+**Antigravity**: Copy the `adapters/antigravity/.agents/skills/` contents into your global Antigravity skills directory (check Antigravity docs for the global path).
+
+**Claude Code**: Copy the `adapters/claude-code/.claude/skills/` contents into `~/.claude/skills/`. Restart Claude Code.
+
+**Cursor**: Copy `adapters/cursor/.cursor/commands/` to your global Cursor commands directory and `adapters/cursor/.cursor/rules/` to your global Cursor rules directory.
+
+---
+
+### How to use after installation
+
+After copying the files, type the command for the skill you want:
+
+```
+/refine-build
+/refine-ssh
+/ai-security-audit
 ```
 
-Commands like `/refine-build` will be available in Cursor's command palette.
+The full list of available commands is in the [Available Commands](#-available-commands) section below.
+
+---
+
+### Do I need to clone this repo?
+
+**No.** You only need to clone this repo if you want to contribute, modify the methodology, or read the source. To use PromptForge in your projects, just download the files or copy them once and install as shown above.
 
 ---
 
@@ -175,6 +211,7 @@ Commands like `/refine-build` will be available in Cursor's command palette.
 | `/refine-product` 📊 | Feature planning and MVP scoping |
 | `/refine-backend` 🗄️ | Server-side logic, APIs, data persistence |
 | `/refine-audit` 🔍 | Code review, security audit, dependency audit, compliance |
+| `/refine-ssh` 🔐 | SSH configuration, key management, hardening, bastion hosts, tunneling |
 | `/ai-security-audit` 🛡️ | Scan codebase for all vulnerabilities (secrets, auth, injection, XSS, etc.) |
 | `/ai-security-fix` 🔧 | Fix vulnerabilities from a security audit report |
 | `/refine-testing` 🧪 | Test strategy, coverage planning, QA |
@@ -200,6 +237,7 @@ Profiles add specialized analysis lenses on top of the base refinement protocol.
 | 📊 **Product** | User problems, user stories, MVP scope, success metrics, UX edge cases |
 | 🐛 **Debug** | Reproduction, root cause analysis, hypotheses, minimal fix, regression testing |
 | 🔍 **Audit** | Code quality, OWASP Top 10, dependency CVEs, license compliance, architecture review |
+| 🔐 **SSH** | Key management, authentication hardening, bastion hosts, tunneling, session auditing |
 | 🧪 **Testing** | Test pyramid, unit/integration/E2E planning, coverage targets, CI integration |
 | 🌐 **API** | REST/GraphQL/gRPC design, versioning, documentation, error format, rate limiting |
 | 🗃️ **Database** | Schema design, migrations, indexing, query optimization, data modeling |
@@ -333,21 +371,3 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 - [ ] Use the base protocol as the foundation for new profiles/adapters
 - [ ] Add an example demonstrating the new profile or feature
 - [ ] Update the README if adding new commands or profiles
-
----
-
-## 📜 License
-
-MIT — see [LICENSE](LICENSE) for details.
-
-<div align="center">
-
-**Refine first. Implement second.** ⚡
-
-Built with 🔨 by [TonySensei0](https://github.com/TonySensei0) and the PromptForge community
-
-<a href="https://github.com/TonySensei0/promptforge">⭐ Star on GitHub</a> ·
-<a href="https://github.com/TonySensei0/promptforge/issues">🐛 Report Bug</a> ·
-<a href="https://github.com/TonySensei0/promptforge/discussions">💬 Discussions</a>
-
-</div>

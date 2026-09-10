@@ -53,6 +53,11 @@
       "category": "refine"
     },
     {
+      "name": "refine-ssh",
+      "description": "SSH configuration, key management, hardening, bastion hosts, tunneling, secure remote access",
+      "category": "refine"
+    },
+    {
       "name": "ai-security-audit",
       "description": "Comprehensive security audit — scans for secrets, injection, XSS, misconfigurations, and AI-generated code red flags",
       "category": "security"

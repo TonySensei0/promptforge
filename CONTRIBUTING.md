@@ -80,7 +80,7 @@ Follow conventional commits:
 - `docs: update README with Cursor instructions`
 - `refactor: simplify adapter structure`
 
-End with: `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>`
+End with: `Co-Authored-By: PromptForge Contributors <noreply@promptforge.dev>`
 
 ## Questions?
 
